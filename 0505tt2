@@ -1,0 +1,4 @@
+i_list = [32,0,"good",0.1,22345.65]
+print (i_list)
+i_list.append(1)
+
