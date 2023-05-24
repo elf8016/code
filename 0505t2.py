@@ -1,19 +1,22 @@
 import random
 
-def keyword():
-    key = random.randrange(1000, 9999)
-    for number in range(4):
-        key = set(key)
-        if (key < 1000):
-      
-    return key
-    
+
+def lookGuess(G, A):
+    listAB = [0, 0]
+    for i in range(4):
+        for k in range(4):
+            if A[i] == G[k]:
+                if i == k:
+                    listAB[0] = listAB[0] + 1
+                else:
+                    listAB[1] = listAB[1] + 1
+
+    return listAB
 
 
-print(keyword())
-
-
-
-
-
-
+if __name__ == "__main__":
+    list1 = [1, 2, 5, 8]
+    list2 = list(input())
+    list2 = list(map(int,list2))
+    CheckA = lookGuess(list2, list1)
+    print(CheckA)
