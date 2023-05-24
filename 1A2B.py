@@ -66,16 +66,8 @@ if __name__ == "__main__":
         Guess = list(map(int,Guess))
         CheckA = lookGuess(Guess, Ans)
         print("A :",CheckA[0],"   B :",CheckA[1])
-        '''
-        if CheckA[0] != 4:
-            CheckA[0] = 0
-            CheckA[1] = 0
-            '''
         CheckG = False
         continue
     
     print("A :",CheckA[0],"B :",CheckA[1])
-
-
-    print(Ans)
     print("End")
