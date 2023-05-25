@@ -1,22 +1,21 @@
 import random
 
+list = [0, 0, 0, 0]
+ListLen = 0
 
-def lookGuess(G, A):
-    listAB = [0, 0]
+while list[0] == 0:
     for i in range(4):
-        for k in range(4):
-            if A[i] == G[k]:
-                if i == k:
-                    listAB[0] = listAB[0] + 1
-                else:
-                    listAB[1] = listAB[1] + 1
+        aa = random.randrange(10)
+        list[i] = aa
+        print(list)
+        
+    ListLen = len(set(list))
+    if ListLen != 4:
+        list[0] = 0
 
-    return listAB
+    continue
 
 
-if __name__ == "__main__":
-    list1 = [1, 2, 5, 8]
-    list2 = list(input())
-    list2 = list(map(int,list2))
-    CheckA = lookGuess(list2, list1)
-    print(CheckA)
+
+
+

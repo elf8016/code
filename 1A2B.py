@@ -2,16 +2,21 @@ import random
 
 
 def MakeAns():
-    list1 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-    list2 = [0, 0, 0, 0]
+    list = [0, 0, 0, 0]
 
-    while list2[0] == 0:
-        random.shuffle(list1)
-        list2 = list1[0:4]
-        #print(list2)
+    while list[0] == 0:
+        for i in range(4):
+            aa = random.randrange(10)
+            list[i] = aa
+            print(list)
+        
+        ListLen = len(set(list))
+        if ListLen != 4:
+            list[0] = 0
+
         continue
 
-    return list2
+    return list
 
 
 def CheckGuess(x: str):
