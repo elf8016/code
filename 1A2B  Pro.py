@@ -69,7 +69,7 @@ if __name__ == "__main__":
             continue
 
         Guess = list(Guess)
-        Guess = list(map(int,Guess))
+        Guess = list(map(int,Guess))            #!This mean ['1','2','3'](str) turn to [1,2,3](int)
         CheckA = lookGuess(Guess, Ans)                                  #!CheckA = listAB
         print("\033[32m  A :",CheckA[0],"   B :",CheckA[1],"\033[0m")
         CheckG = False
